@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var page = 1;
+               function showShop() {
+					$.ajax({
+						"url": "http://h6.duchengjiu.top/shop/api_goods.php?page=" + page + "&pagesize=9",
+						"type": "GET",
+						"dataType": "json",
+						"success": function(response) {
+							console.log(response);
+							for (var j = 0; j < response.page.page_count; j++) {
+								$("#ButtonCounter").append($('<span>' + (j + 1) + '</span>'));
+							}
+							var obj = response;
+							for (var i = 0; i < obj.data.length; i++) {
+								$("#shop").append('<li><div class="shade"><p class="opO">￥' + obj.data[i].price +
+									'</p><p class="opT"><a  href="detial.html?goods_id=' + obj.data[i].goods_id + '">' + obj.data[i].goods_desc +
+									'</a></p></div><img src="' + obj.data[i].goods_thumb +
+									'"/><p><a href="detial.html?goods_id=' + obj.data[i].goods_id +
+									'">' + obj.data[i].goods_name +
+									'</a></p><p class="op1">' + obj.data[i].goods_desc +
+									'</p><p class="op2">￥' + obj.data[i].price +
+									'</p></li>');
+								var	search=obj.data[i].goods_id;
+							}
+							//通过goods_id查询商品数据
+							$("#btn").click(function() {
+								var search = $("#str").val();
+								console.log(search);
+								window.location.href = "detial.html?good_cat=" + search;
+								window.sessionStorage.search = search;
+								
+								
+							})
+						}
+					})
+				}
+				showShop(page)
+	</script>
+</html>

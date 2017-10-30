@@ -29,6 +29,7 @@
 	width: 317px;
 	height: 190px;
 	margin-bottom: 23px;
+	
 }
 #sChart .sChart-three{
 	margin: 0;
@@ -54,7 +55,11 @@
 	width: 316px;
 	height: 366px;
 	background-color: yellow;
-	
+	float: left;
+	margin-top: 10px;
+}
+.liangPin-one-top{
+	overflow: hidden;
 }
 .liangPin-one-btm{
 	width: 316px;
@@ -72,14 +77,57 @@
 	
 }
 .liangPin-one-btm-x span{
-	text-align: center;
-	line-height: 40px;
+	/*text-align: center;
+	line-height: 40px;*/
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 	color: #ccc;
 }
 .liangPin-one-btm-y{
 	width: 50px;
 	height:40px;
 	float: right;
-	background: url(../img/heart_gray20_18.png) right no-repeat;
+	background: url(../img/heart_gray20_18.png) right no-repeat ;
 	color: #ccc;
+	font-size: 14px;
+	line-height: 40px;
+}
+.liangPin-one-top-hd{
+	width: 317px;
+	height: 317px;
+	position: absolute;
+	background-color: rgba(3,3,3,0.5);
+	display: none;
+}
+.liangPin-one-top:hover .liangPin-one-top-hd{
+	display: block;
+}
+.liangPin-one-top-hd p{
+	text-align: center;
+	color: white;
+	margin: 20px auto;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow: hidden;
+}
+.liangPin-one-top-hd .qian{
+	color: #0c6eba;
+	font-style: italic;
+	font-size: 20px;
+	text-align:left;
+	margin: 10px;
+}
+.liangPin-one-top-hd .jieShao{
+	width: 230px;
+	font-size: 14px;
+	margin-top: 80px;
+	font-weight: 600;
+}
+.liangPin-one-top-hd .gongXiao{
+	font-size: 14px;
+	white-space:normal;
+}
+.liangPin-two{
+	margin: 0 26px;
 }
