@@ -1,0 +1,85 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+/*首页轮播图*/
+#lunBo{
+	width: 1000px;
+	height: 475px;
+	margin: auto;
+	overflow: hidden;
+}
+/*方块图one*/
+#sChart{
+	width:1000px;
+	height: 403px;
+	/*background-color: red;*/
+	margin: auto;
+	list-style: none;
+}
+#sChart .sChart-one{
+	width: 317px;
+	height: 403px;
+	/*background-color: yellow;*/
+	margin-right: 24.5px;
+	float: left;
+}
+.sChart-one-top{
+	width: 317px;
+	height: 190px;
+	margin-bottom: 23px;
+}
+#sChart .sChart-three{
+	margin: 0;
+}
+/*良品推荐*/
+#xBiaoTi{
+	width: 1000px;
+	height: 30px;
+	/*background-color: red;*/
+	margin: 30px auto;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	line-height: 30px;
+	color: #333;
+	font-size: 12px;
+}
+#liangPin{
+	width: 1000px;
+	margin: auto;
+	background-color: red;
+}
+#liangPin .liangPin-one{
+	width: 316px;
+	height: 366px;
+	background-color: yellow;
+	
+}
+.liangPin-one-btm{
+	width: 316px;
+	height: 40px;
+	margin-top: 5px;
+	background-color: yellowgreen;
+	
+}
+.liangPin-one-btm-x {
+	width: 177px;
+	height:40px;
+	float: left;
+	display: block;
+	
+	
+}
+.liangPin-one-btm-x span{
+	text-align: center;
+	line-height: 40px;
+	color: #ccc;
+}
+.liangPin-one-btm-y{
+	width: 50px;
+	height:40px;
+	float: right;
+	background: url(../img/heart_gray20_18.png) right no-repeat;
+	color: #ccc;
+}
