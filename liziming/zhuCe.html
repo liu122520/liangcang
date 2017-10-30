@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8"/>
+	<head>
+		<title>用户注册.良仓-生活美学指南</title>
+	</head>
+	<link rel="stylesheet" href="css/jquery.idcode.css"/>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#background{
+			width: 100%;
+			height: 805px;
+			background-color: #989898;
+		}
+		#smallbox{
+			width: 600px;
+			height: 560px;
+			margin: 0 auto;
+			padding-top: 190px;
+		}
+		#picture{
+			width: 230px;
+			height: 100px;
+			margin-left: 220px;
+			cursor: pointer;
+		}
+		#word{
+			width: 600px;
+			height: 500px;
+			
+			margin-top: 40px;
+		}
+		.text{
+			height: 50px;
+			color: white;
+			background: #CBCBCB;
+			font-size: 15px;
+			width: 300px;
+		}
+		#captcha{
+			width: 230px;
+		}
+		p{
+			width: 520px;
+			color: white;
+			margin-top: 10px;
+			margin-left: 100px;
+		}
+		/*四种改变placeholder样式的方法,用于不同的浏览器*/
+		input::-webkit-input-placeholder{
+			color: white;
+		}
+		input:-moz-placeholder{
+			color: white;
+		}
+		input::-moz-placeholder{
+			color: white;
+		}
+		input:-ms-input-placeholder{
+			color: white;
+		}
+		span{
+			color: blue;
+			cursor: pointer;
+			font-size: 15px;
+		}
+		#agree{
+			margin-left: 98px;
+			margin-top: 28px;
+		}
+		button{
+			width: 300px;
+			height: 50px;
+			margin-top: 15px;
+			margin-left: 200px;
+			color: white;
+			background-color: #25292E;
+			font: "微软雅黑";
+			font-size: 20px;
+			cursor: pointer;
+		}
+		.cute{
+			margin-top: 30px;
+			cursor: pointer;
+			margin-left: 200px;
+		}
+		#QQ{
+			float: left;
+		}
+		#weibo{
+			float: left;
+			margin-left: 20px;
+		}
+		#douban{
+			float: left;
+			margin-left: 20px;
+		}
+		#Txweibo{
+			float: left;
+			margin-left: 20px;
+		}
+		#denglu{
+			float: right;
+			text-decoration: underline;
+			margin-right: 100px;
+		}
+		#idcode{
+			color:white
+		}
+		#Txtidcode{
+			color: white;
+		}
+	</style>
+	<body>
+		<div id="background">
+			<div id="smallbox">
+				<div id="picture">
+					<img src="liangcang/C/liangcang.jpg" onclick="window.location.href='首页的链接'"/>
+				</div>
+				<div id="word">
+					<p>
+						手机号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="text" id="number" class="text" placeholder="请输入手机号" 
+							onfocus="this.placeholder=''" onblur="this.placeholder='请输入手机号'"/>
+					</p>
+					<p>
+						验证码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="text" id="captcha" class="text" placeholder="输入验证码" 
+							onfocus="this.placeholder=''" onblur="this.placeholder='输入验证码'"/>
+						<span id="idcode"></span>
+						<span id ="Txtidcode" class ="txtVerification"></span>
+						
+					</p>
+					<p>
+						创建密码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="password" id="creatpassword" class="text" placeholder="6-20位字符组成，区分大小写" 
+							onfocus="this.placeholder=''" onblur="this.placeholder='6-20位字符组成，区分大小写'"/>
+					</p>
+					<p>
+						密码确认&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="password" id="passwordconfirm" class="text" placeholder="确认密码" 
+							onfocus="this.placeholder=''" onblur="this.placeholder='确认密码'"/>
+					</p>
+					<p>
+						<input type="checkbox" id="agree"/>同意<span onclick="window.location.href='http://www.iliangcang.com/i/our/service'"">良仓注册条款</span>
+					</p>
+					<button>立即注册</button> 
+					<div id="bottom" class="cute">
+						<div  id="QQ">
+							<img src="liangcang/C/qq.png" onclick="window.location.href='https://graph.qq.com/oauth/show?which=Login&display=pc&response_type=code&client_id=100359052&redirect_uri=http%3A%2F%2Fwww.iliangcang.com%2Fi%2Fcallback%2Fqq&state=06c1ae0aaad56932724b98ca107bfa2f&scope=get_user_info,add_share,list_album,add_album,upload_pic,add_topic,add_one_blog,add_weibo'"/>
+						</div>
+						<div  id="weibo">
+							<img src="liangcang/C/weibo.png" onclick="window.location.href='https://api.weibo.com/oauth2/authorize?client_id=3061585957&redirect_uri=http%3A%2F%2Fwww.iliangcang.com%2Fi%2Fcallback%2Fweibo&response_type=code&state=weibo_59f6e5e51a0b13.67177556'"/>
+						</div>
+						<div  id="douban">
+							<img src="liangcang/C/douban.png" onclick="window.location.href='https://www.douban.com/service/auth2/auth?client_id=0561438902eb83501023ca9b08c289f0&redirect_uri=http%3A%2F%2Fwww.iliangcang.com%2Fi%2Fcallback%2Fdouban&response_type=code&scope=douban_basic_common%2Cshuo_basic_r%2Cshuo_basic_w%2Ccommunity_advanced_doumail_r'"/>
+						</div>
+						<div  id="Txweibo">
+							<img src="liangcang/C/Txweibo.png" onclick="window.location.href='https://open.t.qq.com/cgi-bin/oauth2/authorize?client_id=801302873&redirect_uri=http%3A%2F%2Fwww.iliangcang.com%2Fi%2Fcallback%2Ftqq&response_type=code'"/>
+						</div>
+						<div  id="denglu" onclick="window.location.href='http://127.0.0.1:8020/%E8%AF%BE%E5%A0%82%E7%BB%83%E4%B9%A0/dengLu.html?__hbt=1509357377248'">
+							登录良仓
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.2.1.js" >
+	</script>
+	<script type="text/javascript" src="js/jquery.idcode.js" >
+	</script>
+	<script>
+			$.idcode.setCode();
+			$("#Txtidcode").change(function() {
+				var r = $.idcode.validateCode();
+				if (r == true) {
+					alert("验证成功！")
+				} else {
+					alert("验证失败！")
+				}
+			})
+		
+		
+	</script>
+</html>
