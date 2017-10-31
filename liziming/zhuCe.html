@@ -106,6 +106,7 @@
 			float: right;
 			text-decoration: underline;
 			margin-right: 100px;
+			color: white;
 		}
 		#idcode{
 			color:white
@@ -131,7 +132,6 @@
 						<input type="text" id="captcha" class="text" placeholder="输入验证码" 
 							onfocus="this.placeholder=''" onblur="this.placeholder='输入验证码'"/>
 						<span id="idcode"></span>
-						<span id ="Txtidcode" class ="txtVerification"></span>
 						
 					</p>
 					<p>
@@ -169,21 +169,34 @@
 			</div>
 		</div>
 	</body>
-	<script type="text/javascript" src="js/jquery-3.2.1.js" >
+	
+
+	<script src="js/jquery-1.12.3.min.js">
 	</script>
 	<script type="text/javascript" src="js/jquery.idcode.js" >
 	</script>
 	<script>
-			$.idcode.setCode();
-			$("#Txtidcode").change(function() {
-				var r = $.idcode.validateCode();
-				if (r == true) {
-					alert("验证成功！")
-				} else {
-					alert("验证失败！")
-				}
+		$.idcode.setCode();
+		$("#captcha").change(function() {
+			var r = $.idcode.validateCode();
+			if (r == true) {
+				alert("验证成功！")
+			} else {
+				alert("验证失败！")
+			}
+		})
+		</script>
+		<script>
+		$("button").click(function(){
+			var url = "http://h6.duchengjiu.top/shop/api_user.php";
+			var data = {
+				status: "register",
+				username: $("#number").val(),
+				password: $("#creatpassword").val()
+			}
+			$.post(url, data, function(obj) {
+				alert(obj.message);
 			})
-		
-		
+		})
 	</script>
 </html>
