@@ -143,7 +143,6 @@ li{
 	height: 53px;
 	/*position: absolute;*/
 	/*background: red;*/
-	
 }
 .xuanZe{
 	width: 1000px;
@@ -235,10 +234,9 @@ width: 150px;
 	margin-left: -99px;
 	margin-top: -9px;
 	/*background: red;*/
-	/*margin: 0 auto;*/
+	margin: 0 auto;
 	display: none;
 	position: relative;
-	z-index: 200;
 }
 
 .zuoBox{
@@ -653,7 +651,7 @@ width: 150px;
 	position: fixed;
 	left: 0px;
 	top: 0px;
-	display: none;
+	/*display: none;*/
 }
 .gouTu{
 	width:652px;
@@ -663,7 +661,6 @@ width: 150px;
 	top: 240px;
 	left: 465px;
 	background-image: url(../img/c4.jpg);
-	display: none;
 }
 .denglu-L{
 	width:568PX;
