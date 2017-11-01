@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript " src="../js/jquery-1.12.3.min.js"></script>
+	</head>
+	<style type="text/css">
+	body{
+		height: 10000px;
+	}
+		.fix{
+				width: 100px;
+				height: 100px;
+				
+				font-weight: bolder;
+				position: fixed;
+				
+				right: 10px;
+				cursor: pointer;
+				line-height: 30px;
+				border-radius: 4px;
+				display: none;
+			}
+			.return{
+				width: 60px;
+				height: 65px;
+				background: url("../img/icon.png") #5B799A -220px -812px;
+			}
+			.return-x{
+				width: 60px;
+				height: 20px;
+				color: white;
+				text-align: center;
+				font-size: 18px;
+				bottom: 10px;
+			}
+	</style>
+	<body>
+		<div class="fix">
+			<a class="return"></a>
+			<a class="return-x">
+				<img src="../img/fix1.png"/>
+				联系客服
+			</a>
+		</div>
+	</body>
+	
+	<script type="text/javascript">
+		$(window).scroll(function() {
+					if ($(window).scrollTop() > 500) {
+						$(".fix").show();
+						$(".fix").click(function() {
+//							$(window).scrollTop(0);
+						$("html,body").animate({"scrollTop": 0},1000);
+						});
+					} else {
+						$(".fix").hide();
+					}
+				});
+	</script>
+</html>

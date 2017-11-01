@@ -8,8 +8,72 @@
 	width: 1000px;
 	height: 475px;
 	margin: auto;
+	position: relative;
 	overflow: hidden;
 }
+.tuP{
+	width: 8500px;
+	height: 475px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.tuP ul{
+	list-style: none;
+}
+.tuP ul li{
+	float: left;
+}
+.btns{
+	width: 1000px;
+	height:40px;
+	/*background-color: red;*/
+	margin-top:230px;
+	position: absolute;
+	z-index: 100;
+	display: none;		
+}
+.leftBtn{
+	display: block;
+	width: 40px;
+	height: 40px;
+	/*background-color: red;*/
+	float: left;
+	background-image: url(../img/Left_circle_pre_white.png);
+}
+.rightBtn{
+	display: block;
+	width: 40px;
+	height: 40px;
+	/*background-color: yellow;*/
+	float: right;
+	background-image: url(../img/Right_circle_next_white.png);
+}
+#lunBo:hover .btns{
+	display: block;
+}
+.circles{
+	width: 196px;
+	height: 6px;
+	/*background-color: red;*/
+	margin: 10px auto;
+}
+.circles ol {
+	list-style: none;
+}
+.circles ol li{
+	width: 20px;
+	height: 4px;
+	/*background:black;*/
+	float: left;
+	margin: 0px 3px;
+	border: 1px solid black;
+}
+.circles ol .cur{
+	background-color: black;
+}
+
+
 /*方块图one*/
 #sChart{
 	width:1000px;
@@ -54,7 +118,7 @@
 #liangPin .liangPin-one{
 	width: 280px;
 	height: 366px;
-	background-color: yellow;
+	/*background-color: yellow;*/
 	float: left;
 	margin-left: 30px;
 	margin-top: 10px;
@@ -66,7 +130,7 @@
 	width: 280px;
 	height: 40px;
 	margin-top: 5px;
-	background-color: yellowgreen;
+	/*background-color: yellowgreen;*/
 	
 }
 .liangPin-one-btm-x {
