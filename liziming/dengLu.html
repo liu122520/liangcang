@@ -104,6 +104,9 @@
 			cursor: pointer;
 			margin-left: 150px;
 		}
+		.cute hover:{
+			opacity: 0.5;
+		}
 		#QQ{
 			float: left;
 		}
@@ -124,6 +127,12 @@
 			text-decoration: underline;
 			margin-right: 150px;
 			color: white;
+		}
+		#jiaobiao{
+			margin-top: -50px;
+			margin-left: 1190px;
+			position: fixed;
+			cursor: pointer;
 		}
 	</style>
 	<body>
@@ -172,10 +181,13 @@
 					</div>
 				</div>
 			</div>
+			<div id="jiaobiao" onclick="window.location.href='http://www.iliangcang.com/i/brand/own/?id=60'">
+				<img src="liangcang/C/jiaobiao.jpg"/>
+			</div>
 		</div>
 	</body>
 </html>
-<script src="js/jquery-1.12.3.min.js">
+<script src="js/jquery-3.2.1.js">
 </script>
 <script type="text/javascript" src="js/jquery.cookie.js">
 </script>
@@ -192,7 +204,10 @@
 		$.post(url, data, function(obj) {
 			console.log(obj);
 			if (obj.code == 0) {
-				alert("登陆成功！")
+				alert("登陆成功!")
+				window.location.href="首页的链接"
+			}else{
+				alert("用户名或密码输入错误!")
 			}
 		})
 	})
