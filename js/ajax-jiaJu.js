@@ -33,3 +33,25 @@ $("#buttom-one-dh").mouseenter(function(){
 		}
 		handMove();
 	});
+
+// 给按钮绑定点击事件处理函数
+$("#fh").click(function() {
+	// 滚动到顶部， 通过设置
+	//    "body,html" 兼容写法，确保所有浏览器都可以正常设置滚动条
+	$("body,html").animate({scrollTop: 0});
+});
+
+// 到达一定位置才显示“回到顶部”按钮
+//   思路：
+//       1. 获取滚动条的位置
+//       2. 根据位置判断，是否显示“回到顶部” 按钮
+$(document).scroll(function() {
+	
+	var top = $(document).scrollTop();
+	
+	if (top > 100) {
+		$("#fh").show();
+	} else {
+		$("#fh").hide();
+	}
+})

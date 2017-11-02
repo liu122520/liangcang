@@ -3,6 +3,19 @@
 	padding: 0;
 	text-decoration: none;
 }
+#fh {
+	width: 60px;
+	height: 50px;
+	background: #CCCCCC url("../img/icon.png") -20px -818px;
+	/* 定位方式： 用固定定位 */
+	position: fixed;
+	right: 20px;
+	bottom: 250px;
+	
+	/* 默认是隐藏状态 */
+	display: none;
+}
+		
 /*首页轮播图*/
 #lunBo{
 	width: 1000px;
