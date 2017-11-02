@@ -184,7 +184,6 @@
 	<script type="text/javascript" src="js/jquery.idcode.js" >
 	</script>
 	<script>
-		
 		//手机号用户名输入
 		$("#number").change( function() { 
 			var reg = /^((13[0-9])|(15[^4])|(18[0,2,3,5-9])|(17[0-8])|(147))\d{8}$/;
@@ -243,7 +242,7 @@
 						if(reg1.test(str1) == true){
 							$.post(url, data, function(obj){
 								alert(obj.message);//若登录成功则显示 "注册成功！"
-								window.location.href="http://127.0.0.1:8020/liziming/dengLu.html?__hbt=1509414177743"
+								window.location.href="http://127.0.0.1:8020/liziming/dengLu.html?__hbt=1509414177743"//跳转到登录页面
 							})
 						}else{
 							alert("密码必须为6~20为由英文，字母，下划线组成，区分大小写！")
