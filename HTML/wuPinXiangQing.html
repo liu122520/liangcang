@@ -642,21 +642,7 @@
 	
 	
 		<div id="wuPin">
-			<div class="wuPin-img">
-				<img src=""/>
-			</div>
-			<div class="wuPin-xiangQing">
-				<a href="">1</a>
-				<p>2</p>
-				<span >
-					3
-				</span>
-			<div class="dengLu-gou">
-				<input id="dengLu-gou-d" type="button" value="立即购买" />
-				<input id="dengLu-gou-j" type="button" value="加入购物车"/>
-				
-			</div>	
-			</div>
+			
 		</div>
 		
 		
@@ -771,6 +757,26 @@
 	<script type="text/javascript">
 		var str = window.location.href
 		var arr = str.split("=")
-
+		console.log(arr)
+		$.ajax({
+			type:"get",
+			url:"http://h6.duchengjiu.top/shop/api_goods.php?goods_id="+arr[1],
+			"dataType":"json",
+			success:function(obj){
+				var data = obj.data
+				console.log(data)
+				$("#wuPin").append(
+				'<div class="wuPin-img"><img src="'
+				+data[0].goods_thumb+
+				'" style="width:350px;height:350px"/></div><div class="wuPin-xiangQing"><a href="">'
+				+data[0].goods_name+
+				'</a><p>'
+				+data[0].goods_desc+
+				'</p><span >'
+				+data[0].price+
+				'</span><div class="dengLu-gou"><input id="dengLu-gou-d" type="button" value="立即购买" /><input id="dengLu-gou-j" type="button" value="加入购物车"/></div></div>'
+				)
+			}
+		});
 	</script>
 </html>

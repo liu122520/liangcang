@@ -5,7 +5,7 @@ $.ajax({
 		console.log(res)
 		for(var i=0;i<res.data.length-1;i++){
 		$("#liangPin").append(
-			'<div class="liangPin-one"><div class="liangPin-one-top"><a href="" class="liangPin-one-top-hd"><p class="qian">￥'
+			'<div class="liangPin-one"><div class="liangPin-one-top"><a href="http://127.0.0.1:8020/liangcang/HTML/wuPinXiangQing.html?goods_id='+res.data[i].goods_id+'" class="liangPin-one-top-hd"><p class="qian">￥'
 			+res.data[i].price+
 			'</p><p class="jieShao">'
 			+res.data[i].goods_desc+
