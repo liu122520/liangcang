@@ -1,6 +1,6 @@
 $.ajax({
 	type:"get",
-   "url": "http://h6.duchengjiu.top/shop/api_goods.php?page=5&pagesize=19&cat_id=45",
+   "url": "http://h6.duchengjiu.top/shop/api_goods.php?page=4&pagesize=19&cat_id=45",
 	"success":function(res){
 		console.log(res)
 		for(var i=0;i<res.data.length-1;i++){

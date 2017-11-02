@@ -1,0 +1,53 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#wuPin{
+	width: 1000px;
+	height: 350px;
+	margin:50px auto;
+	background-color: red;
+	
+}
+#wuPin .wuPin-img{
+	width: 350px;
+	height: 350px;
+	background:yellow ;
+	float: left;
+}
+#wuPin .wuPin-xiangQing{
+	width: 600px;
+	height: 350px;
+	background: green;
+	float: left;
+}
+#wuPin .wuPin-xiangQing a{
+	display: block;
+	width: 200px;
+	height: 40px;
+	color: #ccc;
+	text-align: center;
+	line-height: 40px;
+}
+#wuPin .wuPin-xiangQing p{
+	width: 200px;
+	height: 40px;
+	/*color: #ccc;*/
+	text-align: center;
+	line-height: 40px;
+}
+#wuPin .wuPin-xiangQing span{
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	color: rgb(16,131,255);
+	text-align: center;
+}
+.dengLu-gou input{
+	width: 100px;
+	height: 30px;
+	background:deeppink ;
+	font-size: 20px;
+	color: white;
+	float: left;
+}

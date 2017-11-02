@@ -251,6 +251,8 @@ footer .bottom {
 
 .bottom .ziQ ul li {
 	width: 90px;
+	height: 18px;
+	line-height: 18px;
 	text-align: center;
 	display: block;
 	float: left;

@@ -1,0 +1,54 @@
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+#shuJ{
+	width: 1000px;
+	/*height: 30px;*/
+	/*background-color: red;*/
+	margin: 50px auto;
+}
+#shuJ .shuJ-cars{
+	width: 300px;
+	height: 30px;
+	/*background-color: yellow;*/
+	margin: auto;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	color: #ccc;
+}
+#shuJ .shuJ-cars .shuJ-car{
+	width: 149px;
+	height: 30px;
+	/*background-color: bisque;*/
+	border-left: 1px solid black;
+	float: left;
+	color: #6393b4;
+}
+#shuJ .shuJ-cars .shuJ-fk{
+	width: 148px;
+	height: 30px;
+	/*background-color: aqua;*/
+	float: left;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+#tianJia{
+	widows: 1000px;
+	margin: auto;
+	background-color: red;
+}
+#tianJia table {
+	width: 1000px;
+	border: none;
+	margin: auto;
+}
+#tianJia tr th{
+	border: none;
+	font-size: 14px;
+}
+#tianJia #tianJia-sP{
+	
+}
