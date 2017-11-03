@@ -1,0 +1,96 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#liangPin{
+	width: 1000px;
+	margin: auto;
+	background-color: red;
+	
+}
+.clear{
+	clear:both;
+}
+#liangPin .liangPin-one{
+	width: 280px;
+	height: 366px;
+	/*background-color: yellow;*/
+	float: left;
+	margin-left: 30px;
+	margin-top: 10px;
+}
+.liangPin-one-top{
+	overflow: hidden;
+}
+.liangPin-one-btm{
+	width: 280px;
+	height: 40px;
+	margin-top: 5px;
+	/*background-color: yellowgreen;*/
+	
+}
+.liangPin-one-btm-x {
+	/*width: 177px;*/
+	height:40px;
+	float: left;
+	display: block;
+	
+	
+}
+.liangPin-one-btm-x span{
+	/*text-align: center;
+	line-height: 40px;*/
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #ccc;
+}
+.liangPin-one-btm-y{
+	width: 178px;
+	height:40px;
+	text-overflow : ellipsis;
+	overflow: hidden;
+	float: right;
+	background: url(../img/heart_gray20_18.png) right no-repeat ;
+	color: #ccc;
+	font-size: 14px;
+	line-height: 40px;
+}
+.liangPin-one-top-hd{
+	width: 280px;
+	height: 317px;
+	position: absolute;
+	background-color: rgba(3,3,3,0.5);
+	display: none;
+}
+.liangPin-one-top:hover .liangPin-one-top-hd{
+	display: block;
+}
+.liangPin-one-top-hd p{
+	text-align: center;
+	color: white;
+	margin: 20px auto;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow: hidden;
+}
+.liangPin-one-top-hd .qian{
+	color: #0c6eba;
+	font-style: italic;
+	font-size: 20px;
+	text-align:left;
+	margin: 10px;
+}
+.liangPin-one-top-hd .jieShao{
+	width: 230px;
+	font-size: 14px;
+	margin-top: 80px;
+	font-weight: 600;
+}
+.liangPin-one-top-hd .gongXiao{
+	font-size: 14px;
+	white-space:normal;
+}
+.liangPin-two{
+	margin: 0 26px;
+}

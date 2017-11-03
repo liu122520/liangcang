@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户登录.良仓-生活美学指南</title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			outline: none;
+		}
+		#background{
+			width: 100%;
+			height: 750px;
+			background-color: #989898;
+		}
+		#smallbox{
+			width: 600px;
+			height: 390px;
+			margin: 0 auto;
+			padding-top: 230px;
+		}
+		#picture{
+			width: 230px;
+			height: 100px;
+			margin: 0 auto;
+			cursor: pointer;
+		}
+		.q{
+			width: 230px;
+			height: 100px;
+		}
+		#word{
+			width: 600px;
+			height: 260px;
+			margin: 40px auto;
+		}
+		.text{
+			width: 300px;
+			height: 50px;
+			color: white;
+			background-color: #CBCBCB;
+			font-size: 15px;
+			text-indent: 70px;
+			border:none;
+		}
+		p{
+			width: 520px;
+			color: white;
+			margin-top: 10px;
+			margin-left: 100px;
+		}
+		#number{
+			background-image: url("../img/username.jpg");
+			background-repeat: no-repeat;
+			background-size: 50px 40px;
+			background-position: 5px 6px
+		}
+		#password{
+			background-image: url("../img/password.jpg");
+			background-repeat: no-repeat;
+			background-size: 50px 40px;
+			background-position: 5px 6px
+		}
+		/*四种改变placeholder样式的方法,用于不同的浏览器*/
+		input::-webkit-input-placeholder{
+			color: white;
+		}
+		input:-moz-placeholder{
+			color: white;
+		}
+		input::-moz-placeholder{
+			color: white;
+		}
+		input:-ms-input-placeholder{
+			color: white;
+		}
+		#auto{
+			margin-left: 148px;
+			margin-top: 10px;
+			color: white;
+			float: left;
+		}
+		#forget{
+			margin-right: 140px;
+			margin-top: 10px;
+			float: right;
+			color: white;
+			cursor: pointer;
+		}
+		button{
+			width: 300px;
+			height: 50px;
+			margin-top: 15px;
+			margin-left: 150px;
+			color: white;
+			background-color: #25292E;
+			font: "微软雅黑";
+			font-size: 18px;
+			font-weight:900;
+			cursor: pointer;
+			border: none;
+		}
+		.cute{
+			margin-top: 30px;
+			cursor: pointer;
+			margin-left: 150px;
+		}
+		.cute hover:{
+			opacity: 0.5;
+		}
+		#QQ{
+			float: left;
+		}
+		#weibo{
+			float: left;
+			margin-left: 20px;
+		}
+		#douban{
+			float: left;
+			margin-left: 20px;
+		}
+		#Txweibo{
+			float: left;
+			margin-left: 20px;
+		}
+		#zhuce{
+			float: right;
+			text-decoration: underline;
+			margin-right: 150px;
+			color: white;
+		}
+		#jiaobiao{
+			margin-top: -50px;
+			margin-left: 1190px;
+			position: fixed;
+			cursor: pointer;
+		}
+	</style>
+	<body>
+		<div id="background">
+			<div id="smallbox">
+				<div id="picture">
+					<img src="../img/liangcang.jpg" class="q" onclick="window.location.href='首页的链接'"/>
+				</div>
+				<div id="word">
+					<p>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="text" id="number" class="text" placeholder="用户名/邮箱/手机号" 
+							onfocus="this.placeholder=''" onblur="this.placeholder='用户名/邮箱/手机号'"/>
+					</p>
+					<p>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="password" id="password" class="text" placeholder="密码" 
+							onfocus="this.placeholder=''" onblur="this.placeholder='密码'"/>
+						<span id="idcode"></span>
+					</p>
+					<div>
+						<div id="auto">
+							<input type="checkbox" checked="checked"/>自动登录
+						</div>
+						<div id="forget" onclick="window.location.href='http://www.iliangcang.com/i/ufindpwd/'">
+							忘记密码？
+						</div>
+					</div>
+					<button>登录良仓</button>
+					<div id="bottom" class="cute">
+						<div  id="QQ">
+							<img src="../img/qq.png" onclick="window.location.href='https://graph.qq.com/oauth/show?which=Login&display=pc&response_type=code&client_id=100359052&redirect_uri=http%3A%2F%2Fwww.iliangcang.com%2Fi%2Fcallback%2Fqq&state=06c1ae0aaad56932724b98ca107bfa2f&scope=get_user_info,add_share,list_album,add_album,upload_pic,add_topic,add_one_blog,add_weibo'"/>
+						</div>
+						<div  id="weibo">
+							<img src="../img/weibo.png" onclick="window.location.href='https://api.weibo.com/oauth2/authorize?client_id=3061585957&redirect_uri=http%3A%2F%2Fwww.iliangcang.com%2Fi%2Fcallback%2Fweibo&response_type=code&state=weibo_59f6e5e51a0b13.67177556'"/>
+						</div>
+						<div  id="douban">
+							<img src="../img/douban.png" onclick="window.location.href='https://www.douban.com/service/auth2/auth?client_id=0561438902eb83501023ca9b08c289f0&redirect_uri=http%3A%2F%2Fwww.iliangcang.com%2Fi%2Fcallback%2Fdouban&response_type=code&scope=douban_basic_common%2Cshuo_basic_r%2Cshuo_basic_w%2Ccommunity_advanced_doumail_r'"/>
+						</div>
+						<div  id="Txweibo">
+							<img src="../img/Txweibo.png" onclick="window.location.href='https://open.t.qq.com/cgi-bin/oauth2/authorize?client_id=801302873&redirect_uri=http%3A%2F%2Fwww.iliangcang.com%2Fi%2Fcallback%2Ftqq&response_type=code'"/>
+						</div>
+						<div  id="zhuce" onclick="window.location.href='http://127.0.0.1:8020/liangcang/HTML/zhuCe.html'">
+							注册良仓
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="jiaobiao" onclick="window.location.href='http://www.iliangcang.com/i/brand/own/?id=60'">
+				<img src="../img/jiaobiao.jpg"/>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery-3.2.1.js">
+</script>
+<script type="text/javascript" src="js/jquery.cookie.js">
+</script>
+<script type="text/javascript" src="js/jquery.idcode.js" >
+</script>
+<script>
+	$("button").click(function(){
+		var url = "http://h6.duchengjiu.top/shop/api_user.php";
+		var data = {
+			status: "login",
+			username: $("#number").val(),
+			password: $("#password").val()
+		}
+		$.post(url, data, function(obj) {
+			console.log(obj);
+			if (obj.code == 0) {
+				alert("登陆成功!")
+				window.location.href="首页的链接"
+			}else{
+				alert("用户名或密码输入错误!")
+			}
+		})
+	})
+</script>
